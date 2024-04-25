@@ -1,0 +1,138 @@
+
+.app__work {
+  margin: 40px;
+  display: grid;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, 230px);
+}
+
+.app__work .work {
+  box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
+  border-width: 1px;
+  height: 180px;
+  border-color: black;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 8px;
+  opacity: 0;
+  color: #fff;
+}
+
+.app__work .work .hover_bg {
+  box-shadow: 6px 6px 0 0 #1d262b;
+  background-color: #b6b6b6;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-color: black;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease-in;
+}
+
+.app__work .work .hover_bg p {
+  color: white;
+}
+
+.app__work .work .hover_bg:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.app__work .work.visible.right{
+  animation: goIn_right 1s ease-in-out forwards;
+}
+
+.app__work .work.visible.left{
+  animation: goIn_left 1s ease-in-out forwards;
+}
+
+.app__work .work.visible.buttom{
+  animation: goIn_buttom 1s ease-in-out forwards;
+}
+
+.app__work .work.visible.top{
+  animation: goIn_top 1s ease-in-out forwards;
+}
+
+.app__work .work h2 {
+  font-family: "Playfair Display", serif;
+  color: black;
+  font-weight: 600;
+  font-size: 17px;
+  margin: 5px;
+}
+
+.app__work .work p {
+  /* padding-top: 20px; */
+  font-size: 14px;
+  font-weight: 600;
+  margin: 5px;
+  text-align: center;
+  color: gray;
+}
+
+@keyframes goIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes goIn_right {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes goIn_left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes goIn_top {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes goIn_buttom {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

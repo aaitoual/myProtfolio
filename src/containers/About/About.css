@@ -1,0 +1,56 @@
+.app__about {
+  opacity: 0;
+}
+
+.app__about.visible {
+  animation: goIn 1s ease-in-out forwards;
+}
+
+@keyframes goIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app__about .title {
+  margin-left: 50px;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.app__about .info {
+  margin-bottom: 1000px;
+  margin-left: 50px;
+  margin: 30px 50px 100px 50px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.app__about .info span {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  @keyframes goIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-15%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
