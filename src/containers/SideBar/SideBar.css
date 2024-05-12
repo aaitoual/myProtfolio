@@ -157,7 +157,9 @@
   position: fixed;
   background: #f2f3f7;
   transition: transform 0.5s ease-out;
-  z-index: 1;
+  z-index: 101;
+  /* background-color: red; */
+  transform: translateX(-300px);
   overflow-y: scroll;
 
 }
@@ -245,13 +247,18 @@
   transform: translateX(0%);
 }
 
+/* @media screen and (min-width: 768px) {
+  .app__sidebar__work {
+    transform: translateX(-300px);
+  }
+} */
 @media screen and (max-width: 768px) {
   .app__sidebar {
     transform: translateX(-300px);
   }
-  .app__sidebar__work {
+  /* .app__sidebar__work {
     transform: translateX(-300px);
-  }
+  } */
   .app__sideBar-button {
     display: flex;
   }

@@ -6,3 +6,10 @@
     margin-left: 300px;
   }
 }
+
+.slideRight {
+  @media screen and (max-width: 768px) {
+    transform: translateX(300px);
+    /* margin-left: 300px; */
+  }
+}
