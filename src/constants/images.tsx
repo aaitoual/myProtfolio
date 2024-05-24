@@ -4,4 +4,6 @@ import game from "../assets/game.png"
 import profile from "../assets/profile.png"
 import sign_up from "../assets/sign_up.png"
 import chat from "../assets/chat.png"
-export default { aaitoual, img_bg_1, game, profile, sign_up, chat };
+import webserv from "../assets/webserv.png"
+import inception from "../assets/inception.png"
+export default { aaitoual, img_bg_1, game, profile, sign_up, chat, webserv, inception };

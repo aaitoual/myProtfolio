@@ -55,23 +55,8 @@ function SideBar({
         "A <span> Docker </span> project entailed the development of a secure, multi-service Docker infrastructure within a virtual environment, requiring dedicated containers for NGINX, WordPress + php-fpm, and MariaDB. It necessitated the integration of a Redis cache for WordPress, an FTP server for file transfers, and Adminer for database management. Additionally, the creation of a static website in a non-PHP language was required. This project demonstrated the comprehensive skills needed in Docker, virtual machine management, network configuration, caching, FTP setup, static website creation, and database management.",
       images: [
         {
-          content: images.sign_up,
+          content: images.inception,
           title: "Multiple authentication methods",
-          info: "In this project, we had to assure that the user has many ways to create new accounts or to join his account, fast and secure, we achieved that by adding Google Discord 42Intra as substitutes to using the email and password",
-        },
-        {
-          content: images.profile,
-          title: "Profile",
-          info: "In this project, we had to assure that the user has many ways to create new accounts or to join his account, fast and secure, we achieved that by adding Google Discord 42Intra as substitutes to using the email and password",
-        },
-        {
-          content: images.chat,
-          title: "Real time chat",
-          info: "In this project, we had to assure that the user has many ways to create new accounts or to join his account, fast and secure, we achieved that by adding Google Discord 42Intra as substitutes to using the email and password",
-        },
-        {
-          content: images.game,
-          title: "Pong game",
           info: "In this project, we had to assure that the user has many ways to create new accounts or to join his account, fast and secure, we achieved that by adding Google Discord 42Intra as substitutes to using the email and password",
         },
       ],
@@ -82,24 +67,9 @@ function SideBar({
         "A project focused on implementing an <span> HTTP server </span> in C++ 98, aiming to provide a deeper understanding of the Hypertext Transfer Protocol (HTTP). Developed entirely from scratch, offering valuable insights into web server functionalities and HTTP communication, reinforcing an understanding of HTTP fundamentals and server-side programming concepts.",
       images: [
         {
-          content: images.sign_up,
-          title: "Multiple authentication methods",
-          info: "In this project, we had to assure that the user has many ways to create new accounts or to join his account, fast and secure, we achieved that by adding Google Discord 42Intra as substitutes to using the email and password",
-        },
-        {
-          content: images.profile,
-          title: "Profile",
-          info: "In this project, we had to assure that the user has many ways to create new accounts or to join his account, fast and secure, we achieved that by adding Google Discord 42Intra as substitutes to using the email and password",
-        },
-        {
-          content: images.chat,
-          title: "Real time chat",
-          info: "In this project, we had to assure that the user has many ways to create new accounts or to join his account, fast and secure, we achieved that by adding Google Discord 42Intra as substitutes to using the email and password",
-        },
-        {
-          content: images.game,
-          title: "Pong game",
-          info: "In this project, we had to assure that the user has many ways to create new accounts or to join his account, fast and secure, we achieved that by adding Google Discord 42Intra as substitutes to using the email and password",
+          content: images.webserv,
+          title: "Requests and Responses",
+          info: "Using basic C++ we had to handle, parse and process multiple unique requests, and response, in an efficient way, dealing with each type of the requested HTTP methods (GET, POST, DELETE)",
         },
       ],
     },
