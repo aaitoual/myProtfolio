@@ -25,7 +25,7 @@ function Home() {
         <Header />
         <About />
         <Work setHoveredWork={setHoveredWork} hoveredWork={hoveredWork}/>
-        {/* <Skills /> */}
+        <Skills />
       </div>
     </div>
   );

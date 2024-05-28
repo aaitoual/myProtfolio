@@ -1,10 +1,23 @@
 
 .app__work {
+  margin-top: 40px;
+}
+
+.app__work .work_container {
   margin: 40px;
   display: grid;
   align-items: center;
   justify-content: space-evenly;
   grid-template-columns: repeat(auto-fit, 230px);
+}
+
+.app__work .title {
+  margin-left: 50px;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  animation: goIn 1s ease-in-out forwards;
 }
 
 .app__work .work {

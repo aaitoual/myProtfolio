@@ -7,12 +7,6 @@ function Work({ setHoveredWork, hoveredWork }) {
   const [ref, inView] = useInView();
   const [visible, setVisible] = useState(false);
   useEffect(() => {
-    // setHoveredWork({
-    //   name: "ft_transcendance",
-    //   info: "FT_TRANCENDANCE is a full stack we application, sdalgfdskhjgb and abfsdkf asnddflgksda g sdgdflsg gfsd",
-    // });
-  }, [setHoveredWork]);
-  useEffect(() => {
     if (inView) setVisible(true);
   }, [inView]);
 
@@ -38,28 +32,32 @@ function Work({ setHoveredWork, hoveredWork }) {
   const animation = ["right", "left", "buttom", "top"];
 
   return (
-    <div ref={ref} className={"app__work "}>
-      {myWork.map((element, index) => {
-        return (
-          <div
-            className={
-              "work " + (visible ? "visible " + animation[index % 4] + " " : "") + "!animation-delay-0"
-              // "work " + (visible ? "visible " + animation[0] + " " : "") + "!animation-delay-0"
-            }
-            onClick={() => {
-              hoveredWork?.name === element.name
-                ? setHoveredWork(undefined)
-                : setHoveredWork(element);
-            }}
-          >
-            <h2>{element.name}</h2>
-            <p>{element.info}</p>
-            <div className="hover_bg">
-              <p>MORE INFO</p>
+    <div ref={ref} className={"app__work"}>
+      <p className="title">SOME OF MY PROJECTS</p>
+      <div className="work_container">
+        {myWork.map((element, index) => {
+          return (
+            <div
+              className={
+                "work " +
+                (visible ? "visible " + animation[index % 4] + " " : "") +
+                "!animation-delay-0"
+              }
+              onClick={() => {
+                hoveredWork?.name === element.name
+                  ? setHoveredWork(undefined)
+                  : setHoveredWork(element);
+              }}
+            >
+              <h2>{element.name}</h2>
+              <p>{element.info}</p>
+              <div className="hover_bg">
+                <p>MORE INFO</p>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }
