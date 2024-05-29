@@ -1,56 +1,58 @@
 .app__skills {
-  margin-bottom: 1000px;
-  border-width: 2px;
-  border-color: black;
+  opacity: 1;
+  padding-bottom: 200px;
 }
 
-.app__skills .test {
-  width: 100%;
-  height: 100px;
-  margin: 10px;
+
+.app__skills .title {
+  margin-left: 50px;
+  margin-bottom: 40px;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
-.app__skills .test .skill {
-  font-size: 16;
+.skills_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  /* margin: 40px; */
+  /* background-color: red;
+  display: grid;
+  align-items: center;
+  justify-content: space-around;
+  grid-template-columns: repeat(auto-fit, 500px); */
+}
+
+
+.app__skills .skills_container .skill {
+  /* background-color: gray; */
+  /* width: 100%; */
+  font-size: 14;
   font-family: "Quicksand", Arial, sans-serif;
   font-weight: 600;
-  /* background-color: gray; */
+  width: 400px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  float: left;
+  /* padding-left: 70px; */
 }
 
-.app__skills .test .skill .score {
+.app__skills .skills_container .skill .score {
   width: 0%;
   height: 6px;
   background-color: red;
   margin-top: 10px;
   border-radius: 3px;
   position: relative;
-  animation: scoreAnim 2s ease-in-out forwards;
+  animation: scoreAnim 1s ease-in-out forwards;
 }
 
-@keyframes scoreAnim {
-  0% {
-    /* opacity: 0; */
-    /* transform: translateY(100%); */
-    width: 0%;
 
-  }
-
-  80% {
-    /* opacity: 0; */
-    /* transform: translateY(100%); */
-    width: 90%;
-
-  }
-
-  100% {
-    /* opacity: 1; */
-    /* transform: translateY(0); */
-    width: 75%;
-
-  }
-}
-
-.app__skills .test .skill .score::after {
+.app__skills .skill .score::after {
   position: absolute;
   background-color: red;
   right: 0;
@@ -59,10 +61,50 @@
   top: -1px;
   content: "";
   border-radius: 50%;
+  animation: scoreBallAnim 1s ease-in-out forwards;
 }
 
-.app__skills .test .skill .score span {
+.app__skills .skill .score span {
   position: absolute;
   top: -22px;
   right: 0;
+}
+
+@keyframes scoreAnim {
+  0% {
+    width: 120%;
+
+  }
+
+  80% {
+    width: 120%;
+
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes scoreBallAnim {
+  0% {
+    background-color: black;
+    right: 100%;
+    
+  }
+
+  70% {
+    right: 0%;
+    /* background-color: red; */
+  }
+
+  99% {
+    right: 0%;
+    background-color: red;
+  }
+  
+  100% {
+    /* background-color: red; */
+    right: 0%;
+  }
 }
