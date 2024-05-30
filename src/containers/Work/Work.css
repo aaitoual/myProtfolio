@@ -17,7 +17,7 @@
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 2px;
-  animation: goIn 1s ease-in-out forwards;
+  opacity: 0;
 }
 
 .app__work .work {
@@ -59,19 +59,19 @@
   cursor: pointer;
 }
 
-.app__work .work.visible.right{
+.visible.right{
   animation: goIn_right 1s ease-in-out forwards;
 }
 
-.app__work .work.visible.left{
+.visible.left{
   animation: goIn_left 1s ease-in-out forwards;
 }
 
-.app__work .work.visible.buttom{
+.visible.buttom{
   animation: goIn_buttom 1s ease-in-out forwards;
 }
 
-.app__work .work.visible.top{
+.visible.top{
   animation: goIn_top 1s ease-in-out forwards;
 }
 

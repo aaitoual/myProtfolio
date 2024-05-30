@@ -13,61 +13,76 @@
   letter-spacing: 2px;
 }
 
-.skills_container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 80%;
-  /* margin: 40px; */
-  /* background-color: red;
-  display: grid;
-  align-items: center;
-  justify-content: space-around;
-  grid-template-columns: repeat(auto-fit, 500px); */
+.app__skills .skills_container {
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 40px;
 }
 
-
 .app__skills .skills_container .skill {
-  /* background-color: gray; */
-  /* width: 100%; */
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 10px 0px 30px 0px;
   font-size: 14;
   font-family: "Quicksand", Arial, sans-serif;
   font-weight: 600;
-  width: 400px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 15px;
-  float: left;
-  /* padding-left: 70px; */
 }
 
-.app__skills .skills_container .skill .score {
-  width: 0%;
+.score {
   height: 6px;
-  background-color: red;
-  margin-top: 10px;
-  border-radius: 3px;
+  background-color: #f2f3f7;
+  border-radius: 4px;
+}
+
+.score_bar {
+  height: 100%;
+  border-radius: 8px;
   position: relative;
   animation: scoreAnim 1s ease-in-out forwards;
 }
 
+.score_bar.color-1 {
+  background: #2c98f0;
+}
+.score_bar.color-2 {
+  background: #ec5453;
+}
+.score_bar.color-3 {
+  background: #f9bf3f;
+}
+.score_bar.color-4 {
+  background: #a84cb8;
+}
+.score_bar.color-5 {
+  background: #2fa499;
+}
+.score_bar.color-6 {
+  background: #4054b2;
+}
 
-.app__skills .skill .score::after {
+.score_bar::after {
   position: absolute;
-  background-color: red;
+  background-color: inherit;
   right: 0;
-  width: 8px;
-  height: 8px;
-  top: -1px;
+  width: 10px;
+  height: 10px;
+  top: -2px;
   content: "";
   border-radius: 50%;
   animation: scoreBallAnim 1s ease-in-out forwards;
 }
 
-.app__skills .skill .score span {
+.score_bar span {
   position: absolute;
-  top: -22px;
-  right: 0;
+  top: -28px;
+  right: -15px;
+}
+
+@media screen and (min-width: 768px) {
+  .app__skills .skills_container .skill {
+    float: left;
+    width: 50%;
+  }
 }
 
 @keyframes scoreAnim {
@@ -95,16 +110,9 @@
 
   70% {
     right: 0%;
-    /* background-color: red; */
   }
 
-  99% {
-    right: 0%;
-    background-color: red;
-  }
-  
   100% {
-    /* background-color: red; */
-    right: 0%;
+    background-color: inherit;
   }
 }

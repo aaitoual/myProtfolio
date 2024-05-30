@@ -33,7 +33,9 @@ function Work({ setHoveredWork, hoveredWork }) {
 
   return (
     <div ref={ref} className={"app__work"}>
-      <p className="title">SOME OF MY PROJECTS</p>
+      <p className={"title " + (visible ? "visible right" : "")}>
+        SOME OF MY PROJECTS
+      </p>
       <div className="work_container">
         {myWork.map((element, index) => {
           return (
