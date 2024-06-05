@@ -92,6 +92,7 @@
   left: 20px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  z-index: 10000;
 }
 
 .app__sideBar-button-clicked {
@@ -104,6 +105,8 @@
   left: 320px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  z-index: 10000;
+
 }
 
 
@@ -117,6 +120,8 @@
   border-radius: 9999px;
   transform-origin: left center;
   transition: all 0.5s ease-in-out;
+  z-index: 10000;
+
 }
 
 .app__sideBar-button-clicked::after {

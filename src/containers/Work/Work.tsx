@@ -3,12 +3,15 @@ import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import "./Work.css";
 
-function Work({ setHoveredWork, hoveredWork }) {
+function Work({ setHoveredWork, hoveredWork, setInview }) {
   const [ref, inView] = useInView();
   const [visible, setVisible] = useState(false);
   useEffect(() => {
-    if (inView) setVisible(true);
-  }, [inView]);
+    if (inView) {
+      setVisible(true)
+      setInview("Work")
+    }
+  }, [inView, setInview]);
 
   const myWork = [
     {
@@ -32,7 +35,7 @@ function Work({ setHoveredWork, hoveredWork }) {
   const animation = ["right", "left", "buttom", "top"];
 
   return (
-    <div ref={ref} className={"app__work"}>
+    <div id="Work" ref={ref} className={"app__work"}>
       <p className={"title " + (visible ? "visible right" : "")}>
         SOME OF MY PROJECTS
       </p>

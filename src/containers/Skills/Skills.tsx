@@ -3,12 +3,16 @@ import { useInView } from "react-intersection-observer";
 
 import "./Skills.css";
 
-function Skills() {
+function Skills({setInview}) {
   const [ref, inView] = useInView();
   const [visible, setVisible] = useState(false);
   useEffect(() => {
-    if (inView) setVisible(true);
-  }, [inView]);
+    if (inView){
+      setVisible(true);
+      setInview("Skills")
+    }
+  }, [inView, setInview]);
+
 
   const skills_info = [
     {

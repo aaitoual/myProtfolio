@@ -3,15 +3,18 @@ import { useInView } from "react-intersection-observer";
 import { images } from "../../constants/index.tsx";
 import "./Header.css";
 
-function Header() {
+function Header({setInview}) {
   const [ref, inView] = useInView();
   const [visible, setVisible] = useState(false);
   useEffect(() => {
-    if (inView) setVisible(true);
-  }, [inView]);
+    if (inView){
+      setVisible(true);
+      setInview("Home")
+    }
+  }, [inView, setInview]);
 
   return (
-    <div ref={ref} className="app__header">
+    <div id="Home" ref={ref} className="app__header">
       <img src={images.img_bg_1} alt="headerImage" />
       <div className={"info " + (visible ? "visible" : "")}>
         <div className="name">

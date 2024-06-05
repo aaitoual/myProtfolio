@@ -3,12 +3,15 @@ import { useInView } from "react-intersection-observer";
 
 import "./About.css";
 
-function About() {
+function About({setInview}) {
   const [ref, inView] = useInView();
   const [visible, setVisible] = useState(false);
   useEffect(() => {
-    if (inView) setVisible(true);
-  }, [inView]);
+    if (inView){
+      setVisible(true);
+      setInview("About")
+    }
+  }, [inView, setInview]);
 
   return (
     <div

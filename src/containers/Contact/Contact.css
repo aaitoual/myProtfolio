@@ -1,0 +1,22 @@
+.app__contact {
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  font-size: 18px;
+  margin: 50px 50px 200px 50px;
+}
+
+.app__contact .info {
+  /* font-family: "Playfair Display", serif; */
+  font-weight: 500;
+  margin-top: 20px;
+  color: rgb(59, 59, 59);
+  text-align: left;
+}
+
+.app__contact .info span {
+  /* font-family: "Playfair Display", serif; */
+  font-weight: 600;
+  margin-top: 20px;
+  text-decoration: underline;
+  color: black;
+}

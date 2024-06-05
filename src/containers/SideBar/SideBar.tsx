@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { images } from "../../constants/index.tsx";
 
 import "./SideBar.css";
@@ -14,13 +14,20 @@ function SideBar({
   setShowSideBar,
   setHoveredWork,
   hoveredWork,
+  inview
 }: {
   ShowSideBar: boolean;
   setShowSideBar: React.Dispatch<React.SetStateAction<boolean>>;
   setHoveredWork: React.Dispatch<React.SetStateAction<workType | undefined>>;
   hoveredWork: workType | undefined;
+  inview: string
 }) {
   const [selectedElement, SetSelectedElement] = useState<string>("");
+
+  useEffect(() => {
+    SetSelectedElement(inview)
+  }, [inview])
+  
 
   const work_info = [
     {
@@ -64,7 +71,7 @@ function SideBar({
         </div>
         <div className="app__sidebar-links">
           <ul>
-            {["Home", "About", "Skills", "Work", "Contact"].map((element) => (
+            {["Home", "About", "Work", "Skills", "Contact"].map((element) => (
               <li
                 className="flex justify-center align-center"
                 key={`link-${element}`}
