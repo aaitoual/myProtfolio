@@ -1,18 +1,13 @@
 import emailjs from "@emailjs/browser";
 import React, { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import "./Contact.css";
-import env from "react-dotenv";
 import { YOUR_PUBLIC_KEY, YOUR_SERVICE_ID, YOUR_TEMPLATE_ID } from "../../constants/env.tsx";
+import "./Contact.css";
 
 function Contact({ setInview }) {
-  // dotenv.config();
   const [ref, inView] = useInView();
   const [visible, setVisible] = useState(false);
   useEffect(() => {
-    console.log("----", YOUR_PUBLIC_KEY)
-    console.log("----", YOUR_SERVICE_ID)
-    console.log("----", YOUR_TEMPLATE_ID)
     if (inView) {
       setVisible(true);
       setInview("Contact");
@@ -30,8 +25,8 @@ function Contact({ setInview }) {
 
     emailjs
       .sendForm(
-        YOUR_SERVICE_ID,
-        YOUR_TEMPLATE_ID,
+        YOUR_SERVICE_ID as string,
+        YOUR_TEMPLATE_ID as string,
         form.current,
         { publicKey: YOUR_PUBLIC_KEY }
       )
@@ -50,22 +45,22 @@ function Contact({ setInview }) {
 
   return (
     <div id="Contact" ref={ref} className={"app__contact"}>
+      <div className="title">
+
       CONTACT
+      </div>
       <div className="info">
         You can contact me on my e-mail <span>aaitoual.tsuki@gmail.com</span> or
         my mobile <span>+212648608002</span> or using the following form :
       </div>
-      <div className="form">
+      {/* <div className="form"> */}
         <form ref={form} onSubmit={sendEmail}>
-          <label>Name</label>
-          <input type="text" name="from_name" />
-          <label>Email</label>
-          <input type="email" name="user_email" />
-          <label>Message</label>
-          <textarea name="message" />
-          <input type="submit" value="Send" />
+          <input placeholder="Name" type="text" name="from_name" />
+          <input placeholder="Email" type="email" name="user_email" />
+          <input className="message" placeholder="Message" type="text" name="message" />
+          <input className="btn" type="submit" value="Send" />
         </form>
-      </div>
+      {/* </div> */}
     </div>
   );
 }

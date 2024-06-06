@@ -1,22 +1,76 @@
 .app__contact {
-  font-family: "Playfair Display", serif;
-  font-weight: 800;
-  font-size: 18px;
   margin: 50px 50px 200px 50px;
 }
 
+.app__contact .title {
+  margin-left: 50px;
+  margin-bottom: 40px;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
 .app__contact .info {
-  /* font-family: "Playfair Display", serif; */
+  font-family: "Playfair Display", serif;
   font-weight: 500;
   margin-top: 20px;
   color: rgb(59, 59, 59);
-  text-align: left;
+  text-align: center;
+  /* width: 50%;
+  float: left; */
+  /* background-color: red; */
+  padding: 20px;
 }
 
 .app__contact .info span {
-  /* font-family: "Playfair Display", serif; */
+  font-family: "Playfair Display", serif;
   font-weight: 600;
   margin-top: 20px;
   text-decoration: underline;
   color: black;
+}
+
+.app__contact form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+  /* width: 50%;
+  float: left; */
+}
+
+.app__contact form input {
+  /* border-width: 2px; */
+  background-color: #f2f3f7;
+  padding: 14px;
+  width: 95%;
+  height: 50px;
+}
+
+.app__contact form .message {
+  height: 160px;
+}
+
+.app__contact form .btn {
+  background-color: #c5c5c5;
+  cursor: pointer;
+}
+.app__contact form .message::placeholder {
+  /* text-align: center;
+  justify-content:first baseline; */
+  text-justify: start;
+  /* text */
+}
+
+@media screen and (min-width: 768px) {
+  .app__contact .info {
+    float: left;
+    width: 50%;
+  }
+  .app__contact form {
+    width: 50%;
+    float: left;
+  }
 }

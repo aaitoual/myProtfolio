@@ -52,7 +52,7 @@ function SideBar({
       name: "shorts_translator",
       descrption:
         "A python program for <span> translating youtube videos </span> (shorts) from a language to another, using libraries such as moviepy to edit create and modify the video, and some AI services such as azure text to speech and speech to text AI services to transcribe and convert the text to audio again, also for getting subtitle with the desired languages, along with azure storage service to store and get the needed content and also azure translator service",
-      images: [images.sign_up, images.profile, images.chat, images.game],
+      images: [],
     },
   ];
 
@@ -110,7 +110,7 @@ function SideBar({
                 ?.descrption || "",
           }}
         />
-        {hoveredWork && (
+        {hoveredWork && (work_info.find((work) => work.name === hoveredWork?.name)?.images.length !== 0) && (
           <div className="images">
             <CustomCarousel>
               {work_info
@@ -122,49 +122,6 @@ function SideBar({
           </div>
         )}
       </div>
-      
-
-      {/* <div
-        className={
-          "app__sidebar__work " +
-          (hoveredWork !== undefined ? "translate-x-0" : "")
-        }
-      >
-        <h2>{hoveredWork?.name.toUpperCase()}</h2>
-        <p
-          dangerouslySetInnerHTML={{
-            __html:
-              work_info.find((work) => work.name === hoveredWork?.name)
-                ?.descrption || "",
-          }}
-        />
-        <div className="images">
-          {work_info
-            .find((work) => work.name === hoveredWork?.name)
-            ?.images.map((imageInfo) => {
-              return (
-                <div className="image-info">
-                  <p className="title">{imageInfo.title}</p>
-                  <p className="text-xs">{imageInfo.info}</p>
-                  <img src={imageInfo.content} alt="" />
-                </div>
-              );
-            })}
-        </div>
-      </div>
-      <div
-        className={
-          ShowSideBar || hoveredWork
-            ? "z-[101] app__sideBar-button-clicked"
-            : "z-[101] app__sideBar-button"
-        }
-        onClick={() => {
-          hoveredWork ? setShowSideBar(false) : setShowSideBar(!ShowSideBar);
-          setHoveredWork(undefined);
-        }}
-      >
-        <div />
-      </div> */}
       <div
         className={
           ShowSideBar || hoveredWork
