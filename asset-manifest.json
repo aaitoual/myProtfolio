@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/myProtfolio/static/css/main.3ef842ea.css",
+    "main.js": "/myProtfolio/static/js/main.fbb9867e.js",
+    "static/js/453.5bf6b369.chunk.js": "/myProtfolio/static/js/453.5bf6b369.chunk.js",
+    "static/media/sign_up.png": "/myProtfolio/static/media/sign_up.7fe55fb2b9acf61296a7.png",
+    "static/media/profile.png": "/myProtfolio/static/media/profile.4d5f987cb3f8b7d47005.png",
+    "static/media/game.png": "/myProtfolio/static/media/game.c4bf5b4a5bafc1b9fffa.png",
+    "static/media/chat.png": "/myProtfolio/static/media/chat.102a107944280d5d5898.png",
+    "static/media/aaitoual.jpeg": "/myProtfolio/static/media/aaitoual.ade2863a7fbc01733913.jpeg",
+    "static/media/inception.png": "/myProtfolio/static/media/inception.6d16e22e0c70587eb505.png",
+    "static/media/img_bg_1.jpg": "/myProtfolio/static/media/img_bg_1.6adf404fccaefb5f6bbf.jpg",
+    "static/media/webserv.png": "/myProtfolio/static/media/webserv.f912f80995a204d0c73a.png",
+    "index.html": "/myProtfolio/index.html",
+    "main.3ef842ea.css.map": "/myProtfolio/static/css/main.3ef842ea.css.map",
+    "main.fbb9867e.js.map": "/myProtfolio/static/js/main.fbb9867e.js.map",
+    "453.5bf6b369.chunk.js.map": "/myProtfolio/static/js/453.5bf6b369.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ef842ea.css",
+    "static/js/main.fbb9867e.js"
+  ]
+}
